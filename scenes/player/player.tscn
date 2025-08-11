@@ -215,11 +215,18 @@ height = 24.0
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
 script = ExtResource("1_dovo2")
+jump_gravity = 1400.0
+fall_gravity = 2000.0
+max_run_speed = 200.0
+run_acceleration = 40.0
+run_deceleration = 20.0
+airborne_deceleration = 15.0
+jump_vertical_speed = -450.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gx1jg")
 animation = &"run"
-frame_progress = 0.859916
+frame_progress = 0.332419
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)
@@ -240,3 +247,5 @@ script = ExtResource("9_h17s1")
 
 [node name="PlayerStateFall" type="Node" parent="StateMachine"]
 script = ExtResource("7_0owmy")
+
+[node name="PlayerStateThrow" type="Node" parent="StateMachine"]
