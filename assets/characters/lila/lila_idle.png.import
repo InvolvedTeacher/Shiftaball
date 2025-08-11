@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1w7nqrvngr3c"
-path="res://.godot/imported/tile_set.png-c8990b7ea26da47b748fab428fdf82b4.ctex"
+uid="uid://dqc2xyk05sejp"
+path="res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/test/tile_set.png"
-dest_files=["res://.godot/imported/tile_set.png-c8990b7ea26da47b748fab428fdf82b4.ctex"]
+source_file="res://assets/characters/lila/lila_idle.png"
+dest_files=["res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"]
 
 [params]
 

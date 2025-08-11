@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://laxvc1gbsrsn"]
 
-[ext_resource type="Texture2D" uid="uid://c3xurhvswtkr3" path="res://art/levels/test/background.png" id="1_alwyk"]
-[ext_resource type="Texture2D" uid="uid://b1w7nqrvngr3c" path="res://art/levels/test/tile_set.png" id="2_62xr1"]
+[ext_resource type="Texture2D" uid="uid://c3xurhvswtkr3" path="res://assets/levels/test/background.png" id="1_alwyk"]
+[ext_resource type="Texture2D" uid="uid://b1w7nqrvngr3c" path="res://assets/levels/test/tile_set.png" id="2_62xr1"]
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="3_vxsof"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxsof"]
