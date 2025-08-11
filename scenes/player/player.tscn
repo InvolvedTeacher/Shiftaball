@@ -136,7 +136,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 20.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -205,7 +205,7 @@ jump_vertical_speed = -450.0
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gx1jg")
 animation = &"idle"
-frame_progress = 0.24206
+frame_progress = 0.727241
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)
