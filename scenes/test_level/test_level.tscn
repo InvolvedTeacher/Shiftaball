@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://laxvc1gbsrsn"]
+[gd_scene load_steps=7 format=4 uid="uid://laxvc1gbsrsn"]
 
 [ext_resource type="Texture2D" uid="uid://c3xurhvswtkr3" path="res://assets/levels/test/background.png" id="1_alwyk"]
 [ext_resource type="Texture2D" uid="uid://b1w7nqrvngr3c" path="res://assets/levels/test/tile_set.png" id="2_62xr1"]
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="3_vxsof"]
+[ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="4_yetkn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxsof"]
 texture = ExtResource("2_62xr1")
@@ -161,7 +162,8 @@ texture = ExtResource("2_62xr1")
 20:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_yetkn"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_vxsof")
 
 [node name="TestLevel" type="Node"]
@@ -183,3 +185,6 @@ tile_set = SubResource("TileSet_yetkn")
 
 [node name="Player" parent="." instance=ExtResource("3_vxsof")]
 position = Vector2(74, 438)
+
+[node name="Ball" parent="." groups=["Ball"] instance=ExtResource("4_yetkn")]
+position = Vector2(427, 223)

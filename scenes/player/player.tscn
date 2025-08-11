@@ -193,6 +193,7 @@ height = 24.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
+collision_mask = 4
 script = ExtResource("1_dovo2")
 jump_gravity = 1400.0
 fall_gravity = 2000.0
@@ -205,7 +206,7 @@ jump_vertical_speed = -450.0
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gx1jg")
 animation = &"idle"
-frame_progress = 0.727241
+frame_progress = 0.0049442
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)

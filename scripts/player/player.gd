@@ -10,8 +10,11 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
+var ball: RigidBody2D
+
 func _ready() -> void:
 	sprite.play()
+	ball = get_tree().get_first_node_in_group("Ball")
 
 func _process(_delta):
 	var facing_left =  velocity.x < 0
