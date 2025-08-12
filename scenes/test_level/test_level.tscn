@@ -187,4 +187,4 @@ tile_set = SubResource("TileSet_yetkn")
 position = Vector2(74, 438)
 
 [node name="Ball" parent="." groups=["Ball"] instance=ExtResource("4_yetkn")]
-position = Vector2(427, 223)
+position = Vector2(-100, -100)
