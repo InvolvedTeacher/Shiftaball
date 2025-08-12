@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Ball
 
 var disabled: bool
 var player: CharacterBody2D
@@ -10,8 +11,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		disable_ball()
-	if Input.is_action_just_pressed("throw"):
-		throw_ball()
 
 func disable_ball() -> void:
 	hide()
@@ -20,12 +19,13 @@ func disable_ball() -> void:
 	disabled = true
 
 # throw_ball throws the ball only if it is currently disabled
-func throw_ball() -> void:
+func throw_ball(strength: float) -> void:
 	if not disabled:
 		return
+	var direction: Vector2 = (get_viewport().get_mouse_position() - player.position).normalized()
 	PhysicsServer2D.body_set_state(get_rid(), PhysicsServer2D.BODY_STATE_TRANSFORM,
 			Transform2D.IDENTITY.translated(player.position))
 	PhysicsServer2D.body_set_state(get_rid(), PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY,
-			Vector2(500, -500)) # TODO: eliminate hard coded value
+			direction * strength)
 	show()
 	disabled = false

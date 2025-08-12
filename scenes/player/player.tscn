@@ -1,18 +1,19 @@
-[gd_scene load_steps=27 format=3 uid="uid://d317g3stss0nr"]
+[gd_scene load_steps=28 format=3 uid="uid://d317g3stss0nr"]
 
 [ext_resource type="Script" uid="uid://bix0nw446urs" path="res://scripts/player/player.gd" id="1_dovo2"]
-[ext_resource type="Texture2D" uid="uid://dnw5ovvphr1hl" path="res://assets/characters/test_player/fall.png" id="2_h17s1"]
-[ext_resource type="Texture2D" uid="uid://dqc2xyk05sejp" path="res://assets/characters/lila/lila_idle.png" id="3_h17s1"]
-[ext_resource type="Texture2D" uid="uid://bpaf8rxehsh8q" path="res://assets/characters/test_player/jump.png" id="4_fm80t"]
+[ext_resource type="Texture2D" uid="uid://w66imsdm1vqm" path="res://assets/characters/lila/fall.png" id="2_je7p5"]
+[ext_resource type="Texture2D" uid="uid://dqc2xyk05sejp" path="res://assets/characters/lila/idle.png" id="3_h17s1"]
+[ext_resource type="Texture2D" uid="uid://dsx308mspy3b5" path="res://assets/characters/lila/jump.png" id="4_fm80t"]
 [ext_resource type="Texture2D" uid="uid://cmmx7omep56q7" path="res://assets/characters/lila/run.png" id="5_h17s1"]
 [ext_resource type="Script" uid="uid://mu8qm0x22edq" path="res://scripts/player/state_machine.gd" id="6_75vfm"]
 [ext_resource type="Script" uid="uid://d10rsxk2hqh0l" path="res://scripts/player/states/fall.gd" id="7_0owmy"]
 [ext_resource type="Script" uid="uid://to085l6qu1w6" path="res://scripts/player/states/idle.gd" id="7_qek5x"]
 [ext_resource type="Script" uid="uid://bofkum30nmdtu" path="res://scripts/player/states/run.gd" id="8_5gtgg"]
 [ext_resource type="Script" uid="uid://b78yeb5ae4im" path="res://scripts/player/states/jump.gd" id="9_h17s1"]
+[ext_resource type="Script" uid="uid://fk7evm4hgd1a" path="res://scripts/player/states/throw.gd" id="11_je7p5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugbui"]
-atlas = ExtResource("2_h17s1")
+atlas = ExtResource("2_je7p5")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
@@ -47,7 +48,7 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("3_h17s1")
 region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6cv16"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnsyf"]
 atlas = ExtResource("4_fm80t")
 region = Rect2(0, 0, 32, 32)
 
@@ -108,7 +109,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6cv16")
+"texture": SubResource("AtlasTexture_cnsyf")
 }],
 "loop": true,
 "name": &"jump",
@@ -133,7 +134,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ugbui"]
-height = 24.0
+radius = 8.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
@@ -149,11 +151,10 @@ jump_vertical_speed = -450.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gx1jg")
-animation = &"run"
-frame_progress = 0.226865
+animation = &"idle"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(1, 4)
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_ugbui")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -173,3 +174,7 @@ script = ExtResource("9_h17s1")
 script = ExtResource("7_0owmy")
 
 [node name="PlayerStateThrow" type="Node" parent="StateMachine"]
+script = ExtResource("11_je7p5")
+
+[node name="Timer" type="Timer" parent="StateMachine/PlayerStateThrow"]
+one_shot = true

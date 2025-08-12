@@ -8,6 +8,11 @@ func enter():
 	player.set_animation("jump")
 	player.velocity.y = player.get_jump_vertical_speed()
 
+func update(_delta):
+	if Input.is_action_just_pressed("throw"):
+		transitioned.emit(self, "PlayerStateThrow")
+		return
+
 func physics_update(delta: float):
 	if not player.is_on_floor():
 		player.velocity.y += player.get_jump_gravity() * delta

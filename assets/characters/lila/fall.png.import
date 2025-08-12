@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqc2xyk05sejp"
-path="res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"
+uid="uid://w66imsdm1vqm"
+path="res://.godot/imported/fall.png-138e1fb74283cc9ac7086bb143b28059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/lila/lila_idle.png"
-dest_files=["res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"]
+source_file="res://assets/characters/lila/fall.png"
+dest_files=["res://.godot/imported/fall.png-138e1fb74283cc9ac7086bb143b28059.ctex"]
 
 [params]
 

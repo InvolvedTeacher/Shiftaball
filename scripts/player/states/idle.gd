@@ -8,6 +8,9 @@ func enter():
 	player.set_animation("idle")
 
 func update(_delta: float):
+	if Input.is_action_just_pressed("throw"):
+		transitioned.emit(self, "PlayerStateThrow")
+		return
 	if Input.is_action_just_pressed("jump") and player.is_on_floor():
 		transitioned.emit(self, "PlayerStateJump")
 		return
@@ -21,4 +24,7 @@ func physics_update(delta: float):
 	
 	if player.velocity.y > 0 and not player.is_on_floor():
 		transitioned.emit(self, "PlayerStateFall")
+		return
+	if player.velocity.y < 0 and not player.is_on_floor():
+		transitioned.emit(self, "PlayerStateJump")
 		return

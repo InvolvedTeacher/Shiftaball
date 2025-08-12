@@ -7,6 +7,11 @@ func enter():
 	player = get_tree().get_first_node_in_group("Player")
 	player.set_animation("fall")
 
+func update(_delta):
+	if Input.is_action_just_pressed("throw"):
+		transitioned.emit(self, "PlayerStateThrow")
+		return
+
 func physics_update(delta: float):
 	if not player.is_on_floor():
 		player.velocity.y += player.get_fall_gravity() * delta
