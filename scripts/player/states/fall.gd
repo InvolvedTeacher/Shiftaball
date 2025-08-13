@@ -8,6 +8,25 @@ func enter():
 	player.set_animation("fall")
 
 func update(_delta):
+	if Input.is_action_just_pressed("throw"):
+		transitioned.emit(self, "PlayerStateThrow")
+		return
+
+func physics_update(delta: float):
+	if not player.is_on_floor():
+		player.velocity.y += player.get_fall_gravity() * delta
+		
+	var direction := Input.get_axis("move_left", "move_right")
+	if direction:
+		var max_speed = player.get_max_run_speed()
+		var acceleration = player.get_walk_acceleration()
+		player.velocity.x = move_toward(player.velocity.x, direction * max_speed, 
+										acceleration)
+	else:
+		player.velocity.x = move_toward(player.velocity.x, 0, player.get_airborne_deceleration())
+	
+	if player.velocity.y < 0:
+		transitioned.emit(self, "PlayerStateJump")
 	if player.velocity.y == 0 and player.is_on_floor():
 		if player.velocity.x == 0:
 			transitioned.emit(self, "PlayerStateIdle")

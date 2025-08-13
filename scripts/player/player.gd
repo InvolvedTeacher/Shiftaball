@@ -1,34 +1,50 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var jump_gravity: float
+@export var fall_gravity: float
+@export var max_run_speed: float
+@export var run_acceleration: float
+@export var run_deceleration: float
+@export var airborne_deceleration: float
+@export var jump_vertical_speed: float
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
+var ball: RigidBody2D
+
 func _ready() -> void:
 	sprite.play()
+	ball = get_tree().get_first_node_in_group("Ball")
 
-func _physics_process(delta: float) -> void:
-	var is_left = velocity.x < 0
-	sprite.flip_h = is_left
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+func _process(_delta):
+	var facing_left =  velocity.x < 0
+	sprite.flip_h = facing_left
 
-	# Handle jump.
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		velocity.y = jump_vertical_speed
 	move_and_slide()
 
 func set_animation(new_animation: String) -> void:
 	sprite.animation = new_animation
+
+func get_jump_gravity() -> float:
+	return jump_gravity
+
+func get_fall_gravity() -> float:
+	return fall_gravity
+
+func get_max_run_speed() -> float:
+	return max_run_speed
+
+func get_walk_acceleration() -> float:
+	return run_acceleration
+
+func get_walk_deceleration() -> float:
+	return run_deceleration
+
+func get_airborne_deceleration() -> float:
+	return airborne_deceleration
+
+func get_jump_vertical_speed() -> float:
+	return jump_vertical_speed

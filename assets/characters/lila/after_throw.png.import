@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqc2xyk05sejp"
-path="res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"
+uid="uid://cip441bqeop2x"
+path="res://.godot/imported/after_throw.png-0911442eadcec2463c0dfd115c0e401d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/lila/lila_idle.png"
-dest_files=["res://.godot/imported/lila_idle.png-f8b08b4dca37567df11e0cf62787d24f.ctex"]
+source_file="res://assets/characters/lila/after_throw.png"
+dest_files=["res://.godot/imported/after_throw.png-0911442eadcec2463c0dfd115c0e401d.ctex"]
 
 [params]
 
