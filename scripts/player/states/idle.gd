@@ -11,9 +11,6 @@ func update(_delta: float):
 	if Input.is_action_just_pressed("throw"):
 		transitioned.emit(self, "PlayerStateThrow")
 		return
-	if Input.is_action_just_pressed("jump") and player.is_on_floor():
-		transitioned.emit(self, "PlayerStateJump")
-		return
 	if Input.get_axis("move_left", "move_right"):
 		transitioned.emit(self, "PlayerStateRun")
 		return

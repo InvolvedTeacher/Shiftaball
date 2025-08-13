@@ -6,13 +6,17 @@ var player: CharacterBody2D
 var ball: Ball
 
 func enter():
-	player = get_tree().get_first_node_in_group("Player")
-	#player.set_animation("throw")
 	ball = get_tree().get_first_node_in_group("Ball")
+	if not ball.get_disabled():
+		transitioned.emit(self, "PlayerStateIdle")
+		return
+	player = get_tree().get_first_node_in_group("Player")
+	player.set_animation("throw")
 	timer.start()
 
 func update(_delta: float) -> void:
 	if Input.is_action_just_released("throw"):
+		player.set_animation("after_throw")
 		var throw_strength = (1 - timer.time_left) * 800 + 200# TODO: remove hard coded values
 		timer.stop()
 		ball.throw_ball(throw_strength)

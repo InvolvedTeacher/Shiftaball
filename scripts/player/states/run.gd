@@ -25,8 +25,6 @@ func physics_update(delta: float):
 	else:
 		player.velocity.x = move_toward(player.velocity.x, 0, player.get_walk_deceleration())
 	
-	if Input.is_action_just_pressed("jump") and player.is_on_floor():
-		transitioned.emit(self, "PlayerStateJump")
 	if abs(player.velocity.x) > player.get_max_run_speed():
 		transitioned.emit(self, "PlayerStateRun")
 	if player.velocity.y < 0:

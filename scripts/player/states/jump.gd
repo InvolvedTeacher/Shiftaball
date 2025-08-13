@@ -6,7 +6,6 @@ var player: CharacterBody2D
 func enter():
 	player = get_tree().get_first_node_in_group("Player")
 	player.set_animation("jump")
-	player.velocity.y = player.get_jump_vertical_speed()
 
 func update(_delta):
 	if Input.is_action_just_pressed("throw"):

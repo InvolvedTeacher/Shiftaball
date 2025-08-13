@@ -21,6 +21,8 @@ func _process(_delta):
 	sprite.flip_h = facing_left
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jump_vertical_speed
 	move_and_slide()
 
 func set_animation(new_animation: String) -> void:

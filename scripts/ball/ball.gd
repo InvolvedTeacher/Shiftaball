@@ -29,3 +29,6 @@ func throw_ball(strength: float) -> void:
 			direction * strength)
 	show()
 	disabled = false
+
+func get_disabled() -> bool:
+	return disabled
