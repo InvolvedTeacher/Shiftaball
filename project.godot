@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 
 [display]
 
-window/size/viewport_width=854
+window/size/viewport_width=865
 window/size/viewport_height=480
 window/size/window_width_override=1920
 window/size/window_height_override=1080
