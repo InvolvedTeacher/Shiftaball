@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends CharacterBody2D
 class_name Ball
 
 var disabled: bool
@@ -12,10 +12,22 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		disable_ball()
 
+func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	
+	velocity.x = move_toward(velocity.x, 0, delta)
+	
+	#move_and_slide()
+	var collision: KinematicCollision2D = move_and_collide(velocity * delta)
+	if collision:
+		var reflect = collision.get_remainder().bounce(collision.get_normal())
+		velocity = velocity.bounce(collision.get_normal()) * 0.75
+		move_and_collide(reflect)
+
 func disable_ball() -> void:
 	hide()
-	PhysicsServer2D.body_set_state(get_rid(), PhysicsServer2D.BODY_STATE_TRANSFORM,
-			Transform2D.IDENTITY.translated(Vector2(-100, -100)))
+	position = Vector2(-100, -100)
 	disabled = true
 
 # throw_ball throws the ball only if it is currently disabled
@@ -23,10 +35,8 @@ func throw_ball(strength: float) -> void:
 	if not disabled:
 		return
 	var direction: Vector2 = (get_viewport().get_mouse_position() - player.position).normalized()
-	PhysicsServer2D.body_set_state(get_rid(), PhysicsServer2D.BODY_STATE_TRANSFORM,
-			Transform2D.IDENTITY.translated(player.position))
-	PhysicsServer2D.body_set_state(get_rid(), PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY,
-			direction * strength)
+	position = player.position
+	velocity = strength * direction
 	show()
 	disabled = false
 

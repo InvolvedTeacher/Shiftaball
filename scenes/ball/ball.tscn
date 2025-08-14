@@ -1,25 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dibwv8473eq5u"]
+[gd_scene load_steps=4 format=3 uid="uid://dibwv8473eq5u"]
 
 [ext_resource type="Script" uid="uid://de8ycjm2mtajf" path="res://scripts/ball/ball.gd" id="1_nv6q1"]
 [ext_resource type="Texture2D" uid="uid://dfpb1md6g6pj6" path="res://assets/ball/ball.png" id="1_oqv3d"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nv6q1"]
-bounce = 0.75
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_nv6q1"]
 radius = 16.0
 
-[node name="Ball" type="RigidBody2D"]
+[node name="Ball" type="CharacterBody2D"]
 texture_filter = 1
+scale = Vector2(0.2, 0.2)
 collision_layer = 2
 collision_mask = 4
-physics_material_override = SubResource("PhysicsMaterial_nv6q1")
 script = ExtResource("1_nv6q1")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_oqv3d")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-scale = Vector2(0.2, 0.2)
 shape = SubResource("CircleShape2D_nv6q1")

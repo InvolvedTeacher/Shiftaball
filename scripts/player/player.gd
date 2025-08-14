@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
-var ball: RigidBody2D
+var ball: Ball
 
 func _ready() -> void:
 	sprite.play()
