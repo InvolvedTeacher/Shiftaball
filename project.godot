@@ -14,13 +14,23 @@ config/name="Shiftaball"
 run/main_scene="uid://laxvc1gbsrsn"
 config/features=PackedStringArray("4.4", "Mobile")
 
+[autoload]
+
+GameController="*res://scripts/game_controller.gd"
+EventController="*res://scripts/event_controller.gd"
+
 [display]
 
 window/size/viewport_width=865
 window/size/viewport_height=480
 window/size/window_width_override=1920
 window/size/window_height_override=1080
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="uid://k57tjsktx5my"
 
 [input]
 

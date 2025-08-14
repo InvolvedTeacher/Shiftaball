@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d317g3stss0nr"]
+[gd_scene load_steps=33 format=3 uid="uid://d317g3stss0nr"]
 
 [ext_resource type="Script" uid="uid://bix0nw446urs" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://cip441bqeop2x" path="res://assets/characters/lila/after_throw.png" id="2_gx1jg"]
@@ -163,6 +163,10 @@ animations = [{
 radius = 8.0
 height = 32.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx1jg"]
+radius = 8.0
+height = 32.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
 collision_mask = 4
@@ -179,9 +183,17 @@ jump_vertical_speed = -450.0
 sprite_frames = SubResource("SpriteFrames_gx1jg")
 animation = &"after_throw"
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_ugbui")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_gx1jg")
+debug_color = Color(0.968789, 0.111221, 0.352837, 0.42)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("6_75vfm")
@@ -204,3 +216,5 @@ script = ExtResource("11_je7p5")
 
 [node name="Timer" type="Timer" parent="StateMachine/PlayerStateThrow"]
 one_shot = true
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

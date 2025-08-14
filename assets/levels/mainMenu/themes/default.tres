@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://k57tjsktx5my"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phebk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgp78"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2owlj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+CustomMenuButton/base_type = &"Button"
+CustomMenuButton/colors/font_color = Color(1, 1, 1, 1)
+CustomMenuButton/colors/font_hover_color = Color(0.853552, 0.370624, 0.103425, 1)
+CustomMenuButton/font_sizes/font_size = 16
+CustomMenuButton/styles/focus = SubResource("StyleBoxFlat_phebk")
+CustomMenuButton/styles/hover = SubResource("StyleBoxFlat_wgp78")
+CustomMenuButton/styles/normal = SubResource("StyleBoxFlat_2owlj")
