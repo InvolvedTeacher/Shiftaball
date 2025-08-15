@@ -71,6 +71,7 @@ animations = [{
 radius = 15.0
 
 [node name="Coin" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_ais5i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
