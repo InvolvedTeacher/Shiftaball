@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://crld2we1krese" path="res://transitions/fade.gd" id="1_sht2j"]
 
-[node name="Fade" type="ColorRect"]
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+
+[node name="Fade" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

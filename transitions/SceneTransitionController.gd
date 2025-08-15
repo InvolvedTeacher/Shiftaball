@@ -21,7 +21,7 @@ func change_scene(target_scene: String, transition_type: String = "fade", durati
 		_:
 			transition_scene = load("res://transitions/fade.tscn").instantiate()
 		
-	transition_scene.duration = duration
+	transition_scene.get_child(0).duration = duration
 	
 	transition_half_completed.connect(_on_transition_half_completed)
 	transition_completed.connect(_on_transition_completed)
@@ -30,7 +30,7 @@ func change_scene(target_scene: String, transition_type: String = "fade", durati
 	add_child(transition_scene)
 	current_transition = transition_scene
 	
-	transition_scene.transition_in(target_scene)
+	transition_scene.get_child(0).transition_in(target_scene)
 	
 
 func _on_transition_half_completed(target_scene: String):

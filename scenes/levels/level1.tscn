@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://laxvc1gbsrsn"]
+[gd_scene load_steps=18 format=4 uid="uid://laxvc1gbsrsn"]
 
 [ext_resource type="Texture2D" uid="uid://e5wnkvkf28dj" path="res://assets/levels/level_1/bg1.png" id="1_nfihu"]
-[ext_resource type="Texture2D" uid="uid://hc6pwobhkcw4" path="res://assets/levels/level_1/girder tileset.png" id="2_lgguw"]
+[ext_resource type="Texture2D" uid="uid://hc6pwobhkcw4" path="res://assets/levels/level_1/girder_tileset.png" id="2_lgguw"]
 [ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="4_sbmf2"]
 [ext_resource type="Script" uid="uid://yh126s30ncs8" path="res://scripts/player/transition_camera.gd" id="6_nfihu"]
 [ext_resource type="Texture2D" uid="uid://cvopmty7v8mwm" path="res://assets/collectibles/coin.png" id="8_gvm5i"]
@@ -43,13 +43,6 @@ texture_region_size = Vector2i(32, 32)
 2:3/0 = 0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_su4wh"]
-texture = ExtResource("4_sbmf2")
-texture_region_size = Vector2i(32, 32)
-0:0/next_alternative_id = 4
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 12.7338, -4.6575, -12.5356, -4.6575)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd1x5"]
 texture = ExtResource("8_gvm5i")
 texture_region_size = Vector2i(32, 32)
@@ -60,7 +53,6 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
-sources/2 = SubResource("TileSetAtlasSource_su4wh")
 sources/6 = SubResource("TileSetAtlasSource_nd1x5")
 sources/1 = SubResource("TileSetAtlasSource_jprdt")
 

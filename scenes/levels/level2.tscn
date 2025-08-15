@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://drqyjcw5fx1qp"]
 
 [ext_resource type="Texture2D" uid="uid://6civcoqhb5tr" path="res://assets/levels/level_2/bg2.png" id="1_8i1lk"]
-[ext_resource type="Texture2D" uid="uid://16tlrhvhchtf" path="res://assets/levels/level_2/mushroomtileset.png" id="3_8i1lk"]
+[ext_resource type="Texture2D" uid="uid://16tlrhvhchtf" path="res://assets/levels/level_2/mushroom_tileset.png" id="3_8i1lk"]
 [ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="3_hgky1"]
 [ext_resource type="Texture2D" uid="uid://cvopmty7v8mwm" path="res://assets/collectibles/coin.png" id="4_b4tpv"]
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="5_hkuam"]

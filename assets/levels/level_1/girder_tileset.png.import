@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfig6c0sq8gpn"
-path="res://.godot/imported/backgroundv2.png-ea5d5e3cf999ba4dfe70f96c866e3997.ctex"
+uid="uid://hc6pwobhkcw4"
+path="res://.godot/imported/girder_tileset.png-4614b2b63f14ec48f9bf920327cdf48b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/level_2/backgroundv2.png"
-dest_files=["res://.godot/imported/backgroundv2.png-ea5d5e3cf999ba4dfe70f96c866e3997.ctex"]
+source_file="res://assets/levels/level_1/girder_tileset.png"
+dest_files=["res://.godot/imported/girder_tileset.png-4614b2b63f14ec48f9bf920327cdf48b.ctex"]
 
 [params]
 
