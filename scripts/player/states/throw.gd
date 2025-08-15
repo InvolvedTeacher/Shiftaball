@@ -4,6 +4,7 @@ class_name PlayerStateThrow
 var player: CharacterBody2D
 @onready var timer: Timer = $Timer
 var ball: Ball
+@onready var sfx_throw: AudioStreamPlayer2D = $"../../sfx_throw"
 
 func enter():
 	ball = get_tree().get_first_node_in_group("Ball")
