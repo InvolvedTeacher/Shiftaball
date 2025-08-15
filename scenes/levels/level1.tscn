@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=4 uid="uid://laxvc1gbsrsn"]
+[gd_scene load_steps=23 format=4 uid="uid://laxvc1gbsrsn"]
 
-[ext_resource type="Texture2D" uid="uid://c3xurhvswtkr3" path="res://assets/levels/test/background.png" id="1_lgguw"]
+[ext_resource type="Texture2D" uid="uid://bl75vhg63jvvk" path="res://assets/ui/mainMenu/background.png" id="1_nfihu"]
 [ext_resource type="Texture2D" uid="uid://b1w7nqrvngr3c" path="res://assets/levels/test/tile_set.png" id="2_jprdt"]
 [ext_resource type="Texture2D" uid="uid://hc6pwobhkcw4" path="res://assets/levels/girder tileset.png" id="3_ps2vj"]
 [ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/ice spikes.png" id="4_sbmf2"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="10_db1r7"]
 [ext_resource type="PackedScene" uid="uid://l6gwvlqnijhl" path="res://scenes/collectibles/coin_ui.tscn" id="11_6gwlt"]
 [ext_resource type="PackedScene" uid="uid://c2y3rysb650n8" path="res://scenes/collectibles/coin.tscn" id="12_c2nc4"]
-[ext_resource type="PackedScene" uid="uid://ceec2hntrqpft" path="res://scenes/levels/main_menu.tscn" id="13_vhxpm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxsof"]
 texture = ExtResource("2_jprdt")
@@ -302,12 +301,11 @@ texture_filter = 1
 anchors_preset = -1
 anchor_right = 1.012
 anchor_bottom = 1.0
-offset_left = -288.0
-offset_right = -0.248047
+offset_left = -46.0
+offset_right = 33.6201
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lgguw")
-stretch_mode = 1
+texture = ExtResource("1_nfihu")
 
 [node name="TileMap" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -344,5 +342,3 @@ position = Vector2(302, 113)
 
 [node name="Coin4" parent="." instance=ExtResource("12_c2nc4")]
 position = Vector2(529, 85)
-
-[node name="MainMenu" parent="." instance=ExtResource("13_vhxpm")]
