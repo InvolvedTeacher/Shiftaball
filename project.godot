@@ -13,6 +13,7 @@ config_version=5
 config/name="Shiftaball"
 run/main_scene="uid://bb6wfv686ewob"
 config/features=PackedStringArray("4.4", "Mobile")
+config/icon="uid://dfpb1md6g6pj6"
 
 [autoload]
 
