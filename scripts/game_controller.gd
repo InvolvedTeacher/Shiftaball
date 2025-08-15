@@ -22,6 +22,8 @@ func player_death(value: bool) -> void:
 		
 	if updateUI:
 		EventController.emit_signal("coins_dropped", coins_collected)
+		
+	restart_level()
 
 
 func start_game():
