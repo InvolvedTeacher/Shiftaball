@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://l6gwvlqnijhl"]
+
+[ext_resource type="Texture2D" uid="uid://cvopmty7v8mwm" path="res://assets/collectibles/coin.png" id="1_kdgdr"]
+[ext_resource type="Script" uid="uid://d2snqkti6pu7e" path="res://scripts/collectibles/coin_ui.gd" id="1_tgf8n"]
+
+[node name="CoinUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 70.0
+script = ExtResource("1_tgf8n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_kdgdr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -8.0
+offset_right = 45.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

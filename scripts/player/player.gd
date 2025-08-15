@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var jump_gravity: float
 @export var fall_gravity: float
@@ -48,3 +48,7 @@ func get_airborne_deceleration() -> float:
 
 func get_jump_vertical_speed() -> float:
 	return jump_vertical_speed
+
+
+func _on_hitbox_body_entered(_body: Node2D) -> void:
+	GameController.player_death(true)

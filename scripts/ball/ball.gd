@@ -57,3 +57,6 @@ func shift_ball() -> void:
 
 func get_disabled() -> bool:
 	return disabled
+
+func is_small() -> bool:
+	return small
