@@ -6,6 +6,7 @@ var player: CharacterBody2D
 var small_ball_bounce: float = 0.75
 var big_ball_bounce: float = 0.25
 var small: bool
+@onready var sfx_throw: AudioStreamPlayer2D = $sfx_throw
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -44,6 +45,7 @@ func throw_ball(strength: float) -> void:
 	position = player.position
 	velocity = strength * direction
 	show()
+	sfx_throw.play()
 	disabled = false
 
 func shift_ball() -> void:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg7qcflf0631f"]
+[gd_scene load_steps=5 format=3 uid="uid://cg7qcflf0631f"]
 
 [ext_resource type="Texture2D" uid="uid://b5dk2ie08vi8f" path="res://assets/interactive/button/button_unpressed.png" id="1_hy1ir"]
 [ext_resource type="Script" uid="uid://b2j4c3lujmp4j" path="res://scripts/interactive/button/button.gd" id="1_kyw3i"]
+[ext_resource type="AudioStream" uid="uid://dxih2sj0b8x7d" path="res://assets/audio/button.ogg" id="3_yu1tp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyw3i"]
 size = Vector2(32, 9)
@@ -19,5 +20,9 @@ texture = ExtResource("1_hy1ir")
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_kyw3i")
+
+[node name="sfx_button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yu1tp")
+volume_db = -10.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

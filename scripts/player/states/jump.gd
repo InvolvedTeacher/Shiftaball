@@ -1,11 +1,14 @@
 extends State
 class_name PlayerStateJump
 
+@onready var sfx_jump: AudioStreamPlayer2D = $"../../sfx_jump"
+
 var player: CharacterBody2D
 
 func enter():
 	player = get_tree().get_first_node_in_group("Player")
 	player.set_animation("jump")
+	sfx_jump.play()
 
 func update(_delta):
 	if Input.is_action_just_pressed("throw"):
