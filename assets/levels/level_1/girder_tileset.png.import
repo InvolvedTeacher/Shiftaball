@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hc6pwobhkcw4"
-path="res://.godot/imported/girder tileset.png-e45a5244710ac756eb85015ed2266e37.ctex"
+path="res://.godot/imported/girder_tileset.png-4614b2b63f14ec48f9bf920327cdf48b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/level_1/girder tileset.png"
-dest_files=["res://.godot/imported/girder tileset.png-e45a5244710ac756eb85015ed2266e37.ctex"]
+source_file="res://assets/levels/level_1/girder_tileset.png"
+dest_files=["res://.godot/imported/girder_tileset.png-4614b2b63f14ec48f9bf920327cdf48b.ctex"]
 
 [params]
 

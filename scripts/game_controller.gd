@@ -54,6 +54,7 @@ func continue_game():
 
 
 func restart_level():
+	coins_collected = 0
 	get_tree().reload_current_scene()
 
 

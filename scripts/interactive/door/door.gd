@@ -14,4 +14,5 @@ func _on_body_entered(body: Node2D) -> void:
 		finish_level()
 
 func finish_level() -> void:
+	GameController.coins_collected = 0
 	SceneTransitionController.change_scene(next_scene, transition_type, duration)
