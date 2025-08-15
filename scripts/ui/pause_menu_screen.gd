@@ -19,6 +19,8 @@ func _on_quit_button_pressed() -> void:
 
 func _on_restart_button_pressed() -> void:
 	GameController.restart_level()
+	GameController.continue_game()
+	queue_free()
 
 
 func _process(_delta):

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="9_jrfo0"]
 [ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="10_db1r7"]
 [ext_resource type="PackedScene" uid="uid://l6gwvlqnijhl" path="res://scenes/collectibles/coin_ui.tscn" id="11_6gwlt"]
-[ext_resource type="PackedScene" uid="uid://bxjpitljjquc3" path="res://scenes/interactive/door/door.tscn" id="11_lgguw"]
+[ext_resource type="PackedScene" uid="uid://bxjpitljjquc3" path="res://transitions/door.tscn" id="11_lgguw"]
 [ext_resource type="PackedScene" uid="uid://d4c7cuxdpjngf" path="res://scenes/interactive/bars/bars.tscn" id="11_nfihu"]
 [ext_resource type="PackedScene" uid="uid://cg7qcflf0631f" path="res://scenes/interactive/button/button.tscn" id="11_nkeig"]
 [ext_resource type="PackedScene" uid="uid://c2y3rysb650n8" path="res://scenes/collectibles/coin.tscn" id="12_c2nc4"]
@@ -288,6 +288,7 @@ offset_right = 33.6201
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_nfihu")
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -312,6 +313,7 @@ offset_left = 79.0
 offset_top = 6.0
 offset_right = 119.0
 offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Coin" parent="." instance=ExtResource("12_c2nc4")]
 position = Vector2(-200, 129)
@@ -342,3 +344,6 @@ position = Vector2(16, 16)
 
 [node name="Door" parent="." instance=ExtResource("11_lgguw")]
 position = Vector2(848, 48)
+transition_type = "fade"
+next_scene = "res://scenes/levels/level2.tscn"
+duration = 1.0
