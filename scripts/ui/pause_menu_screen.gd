@@ -21,7 +21,7 @@ func _on_restart_button_pressed() -> void:
 	GameController.restart_level()
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("esc") and get_tree().paused:
 		GameController.continue_game()
 		queue_free()

@@ -50,5 +50,5 @@ func get_jump_vertical_speed() -> float:
 	return jump_vertical_speed
 
 
-func _on_hitbox_body_entered(body: Node2D) -> void:
+func _on_hitbox_body_entered(_body: Node2D) -> void:
 	GameController.player_death(true)
