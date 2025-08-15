@@ -79,6 +79,7 @@ esc={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Ball"
 2d_physics/layer_3="Terrain"
+2d_physics/layer_4="interactive"
 
 [rendering]
 

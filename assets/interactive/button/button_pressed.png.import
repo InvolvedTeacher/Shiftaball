@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hc6pwobhkcw4"
-path="res://.godot/imported/girder tileset.png-03c0303ba790e63e08a7e6ae94155c35.ctex"
+uid="uid://c54e44s5cs2ai"
+path="res://.godot/imported/button_pressed.png-d765f0db7deeed808b9ef18ead044afb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/girder tileset.png"
-dest_files=["res://.godot/imported/girder tileset.png-03c0303ba790e63e08a7e6ae94155c35.ctex"]
+source_file="res://assets/interactive/button/button_pressed.png"
+dest_files=["res://.godot/imported/button_pressed.png-d765f0db7deeed808b9ef18ead044afb.ctex"]
 
 [params]
 

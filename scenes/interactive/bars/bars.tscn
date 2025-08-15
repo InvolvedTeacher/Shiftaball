@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4c7cuxdpjngf"]
+
+[ext_resource type="Script" uid="uid://bt421akyhwhen" path="res://scripts/interactive/bars/bars.gd" id="1_cv4ss"]
+[ext_resource type="Texture2D" uid="uid://dutroqg605u7p" path="res://assets/interactive/bars/bars.png" id="1_ij2ph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cv4ss"]
+size = Vector2(32, 32)
+
+[node name="Bars" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_cv4ss")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ij2ph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cv4ss")
