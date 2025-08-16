@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://k57tjsktx5my"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://k57tjsktx5my"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8emv4"]
 content_margin_left = 20.0
@@ -12,12 +12,12 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1w7t"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvxu5"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.332463, 0.179493, 0.444211, 1)
+bg_color = Color(0.486275, 0.286275, 0.639216, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -76,10 +76,21 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skekc"]
 bg_color = Color(0.0497434, 0.0427828, 0.0421323, 0.643137)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm4f5"]
+bg_color = Color(0.721569, 0.541176, 0.866667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md5ro"]
+bg_color = Color(0.486275, 0.286275, 0.639216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
 [resource]
 Button/font_sizes/font_size = 32
 Button/styles/disabled = SubResource("StyleBoxFlat_8emv4")
-Button/styles/focus = SubResource("StyleBoxFlat_p1w7t")
+Button/styles/focus = SubResource("StyleBoxFlat_cvxu5")
 Button/styles/hover = SubResource("StyleBoxFlat_wbuqj")
 Button/styles/normal = SubResource("StyleBoxFlat_ujqca")
 Button/styles/pressed = SubResource("StyleBoxFlat_jqspd")
@@ -95,3 +106,5 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_skekc")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_jm4f5")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_md5ro")

@@ -20,10 +20,11 @@ config/icon="uid://dfpb1md6g6pj6"
 GameController="*res://scripts/game_controller.gd"
 EventController="*res://scripts/event_controller.gd"
 SceneTransitionController="*res://transitions/SceneTransitionController.gd"
+SettingsManager="*res://scripts/settings_manager.gd"
 
 [display]
 
-window/size/viewport_width=865
+window/size/viewport_width=854
 window/size/viewport_height=480
 window/size/window_width_override=1920
 window/size/window_height_override=1080
@@ -88,7 +89,3 @@ esc={
 2d_physics/layer_2="Ball"
 2d_physics/layer_3="Terrain"
 2d_physics/layer_4="interactive"
-
-[rendering]
-
-renderer/rendering_method="mobile"

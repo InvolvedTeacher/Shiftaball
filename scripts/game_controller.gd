@@ -6,6 +6,11 @@ var level_1 = preload("res://scenes/levels/level1.tscn")
 
 var coins_collected: int = 0
 
+
+func _ready():
+	SettingsManager.load_settings()
+
+
 func collect_coin(value: int):
 	coins_collected += value
 	EventController.emit_signal("collect_coin", coins_collected)
