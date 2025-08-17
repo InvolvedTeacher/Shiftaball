@@ -1,9 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://drqyjcw5fx1qp"]
+[gd_scene load_steps=16 format=4 uid="uid://drqyjcw5fx1qp"]
 
 [ext_resource type="Texture2D" uid="uid://6civcoqhb5tr" path="res://assets/levels/level_2/bg2.png" id="1_8i1lk"]
 [ext_resource type="Texture2D" uid="uid://16tlrhvhchtf" path="res://assets/levels/level_2/mushroom_tileset.png" id="3_8i1lk"]
 [ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="3_hgky1"]
-[ext_resource type="Texture2D" uid="uid://cvopmty7v8mwm" path="res://assets/collectibles/coin.png" id="4_b4tpv"]
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="5_hkuam"]
 [ext_resource type="Script" uid="uid://yh126s30ncs8" path="res://scripts/player/transition_camera.gd" id="6_8i1lk"]
 [ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="6_f3b2k"]
@@ -65,17 +64,10 @@ texture_region_size = Vector2i(32, 32)
 2:4/0 = 0
 3:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd1x5"]
-texture = ExtResource("4_b4tpv")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.1392, -11.6933, -4.50885, -16, 4.11247, -16, 11.8419, -12.0897, 16, -3.76564, 16, 3.86473, 11.7428, 12.0897, 3.81518, 16, -4.31067, 16, -11.8419, 11.8915, -16, 4.06292, -16, -3.46835)
-
 [sub_resource type="TileSet" id="TileSet_yetkn"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
-sources/6 = SubResource("TileSetAtlasSource_nd1x5")
 sources/3 = SubResource("TileSetAtlasSource_hgky1")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s24du"]
@@ -163,5 +155,5 @@ position = Vector2(881, 175)
 [node name="Door" parent="." instance=ExtResource("11_bxuut")]
 position = Vector2(455, 255)
 transition_type = "fade"
-next_scene = "res://scenes/ui/main_menu_screen.tscn"
+next_scene = "res://scenes/levels/level3.tscn"
 duration = 1.5

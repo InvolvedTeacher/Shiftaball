@@ -7,12 +7,19 @@ class_name Player extends CharacterBody2D
 @export var run_deceleration: float
 @export var airborne_deceleration: float
 @export var jump_vertical_speed: float
+@export var death_fly_speed : float
+
+@onready var timer: Timer = $StateMachine/PlayerStateDeath/Timer
+@onready var player_state_death: PlayerStateDeath = $StateMachine/PlayerStateDeath
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 var ball: Ball
 
+var player_dead : bool = false
+
 func _ready() -> void:
+	timer.timeout.connect(_on_timeout)
 	sprite.play()
 	ball = get_tree().get_first_node_in_group("Ball")
 
@@ -21,9 +28,10 @@ func _process(_delta):
 	sprite.flip_h = facing_left
 
 func _physics_process(_delta):
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jump_vertical_speed
-	move_and_slide()
+	if !player_dead:
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = jump_vertical_speed
+		move_and_slide()
 
 func set_animation(new_animation: String) -> void:
 	sprite.animation = new_animation
@@ -49,6 +57,15 @@ func get_airborne_deceleration() -> float:
 func get_jump_vertical_speed() -> float:
 	return jump_vertical_speed
 
+func get_death_fly_speed() -> float:
+	return death_fly_speed
 
 func _on_hitbox_body_entered(_body: Node2D) -> void:
-	GameController.player_death(true)
+	player_dead = true
+	timer.start()
+	player_state_death.enter()
+
+func _on_timeout() -> void:
+	if player_dead:
+		player_dead = false
+		GameController.player_death(true)

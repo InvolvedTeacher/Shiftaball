@@ -1,0 +1,221 @@
+[gd_scene load_steps=31 format=3 uid="uid://b8a2my2namghg"]
+
+[ext_resource type="Script" uid="uid://cefhnel2tw6qv" path="res://scripts/misc/fan/fan.gd" id="1_fcyu1"]
+[ext_resource type="Texture2D" uid="uid://bcrih7dqavpec" path="res://assets/misc/fan/fan_spinning.png" id="1_mhrt8"]
+[ext_resource type="Texture2D" uid="uid://bjwsyko7h7xqc" path="res://assets/misc/fan/fan_stopped.png" id="2_fcyu1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fumya"]
+atlas = ExtResource("1_mhrt8")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvbpm"]
+atlas = ExtResource("1_mhrt8")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkw0h"]
+atlas = ExtResource("1_mhrt8")
+region = Rect2(192, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxoj8"]
+atlas = ExtResource("1_mhrt8")
+region = Rect2(288, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c56u0"]
+atlas = ExtResource("2_fcyu1")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1taqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fumya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvbpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkw0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxoj8")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c56u0")
+}],
+"loop": true,
+"name": &"stopped",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_jjjef"]
+points = PackedVector2Array(-15, 6.55671e-07, -5, -48, 4, -48, 14, -35, 14, 35, 4, 48, -5, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcyu1"]
+size = Vector2(96, 170)
+
+[sub_resource type="Gradient" id="Gradient_fcyu1"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.34902)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fumya"]
+gradient = SubResource("Gradient_fcyu1")
+
+[sub_resource type="Curve" id="Curve_rvbpm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gkw0h"]
+width = 2048
+curve = SubResource("Curve_rvbpm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sxoj8"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(48, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = -1.60933e-05
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = -2.23517e-05
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+scale_curve = SubResource("CurveTexture_gkw0h")
+color_ramp = SubResource("GradientTexture1D_fumya")
+
+[sub_resource type="Gradient" id="Gradient_c56u0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1taqf"]
+gradient = SubResource("Gradient_c56u0")
+
+[sub_resource type="Curve" id="Curve_jjjef"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(0.33, 1), 0.0, 0.0, 0, 0, Vector2(0.66, -0.96), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+metadata/_snap_enabled = true
+metadata/_snap_count = 100
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_vmea3"]
+curve_x = SubResource("Curve_jjjef")
+
+[sub_resource type="Curve" id="Curve_hoppk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ttfex"]
+curve = SubResource("Curve_hoppk")
+
+[sub_resource type="Curve" id="Curve_fu35i"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.507326, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wk0fv"]
+curve = SubResource("Curve_fu35i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dvjet"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(31, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 1.07288e-05
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 150.0
+initial_velocity_max = 200.0
+directional_velocity_min = 150.0
+directional_velocity_max = 150.0
+directional_velocity_curve = SubResource("CurveXYZTexture_vmea3")
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = -2.23517e-05
+radial_velocity_curve = SubResource("CurveTexture_wk0fv")
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -2.23517e-06
+radial_accel_max = -2.23517e-06
+radial_accel_curve = SubResource("CurveTexture_ttfex")
+color_ramp = SubResource("GradientTexture1D_1taqf")
+
+[sub_resource type="Gradient" id="Gradient_nni30"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e2hsj"]
+gradient = SubResource("Gradient_nni30")
+
+[sub_resource type="Curve" id="Curve_7wfvi"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.333333, -1), 0.0, 0.0, 0, 0, Vector2(0.657509, 1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_2bxhu"]
+curve_x = SubResource("Curve_7wfvi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8rg5a"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(31, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 150.0
+initial_velocity_max = 200.0
+directional_velocity_min = 150.0
+directional_velocity_max = 150.0
+directional_velocity_curve = SubResource("CurveXYZTexture_2bxhu")
+gravity = Vector3(0, 98, 0)
+color_ramp = SubResource("GradientTexture1D_e2hsj")
+
+[node name="Fan" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_fcyu1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1taqf")
+animation = &"stopped"
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("ConvexPolygonShape2D_jjjef")
+
+[node name="Air" type="Area2D" parent="."]
+position = Vector2(0, -93)
+
+[node name="AirZone" type="CollisionShape2D" parent="Air"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fcyu1")
+debug_color = Color(0.305982, 0.61548, 0.354446, 0.42)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-1, 0)
+emitting = false
+amount = 10
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_sxoj8")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(-1, 0)
+emitting = false
+amount = 16
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_dvjet")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(-1, 0)
+emitting = false
+amount = 16
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_8rg5a")
+
+[connection signal="body_entered" from="Air" to="." method="_on_air_body_entered"]
+[connection signal="body_exited" from="Air" to="." method="_on_air_body_exited"]

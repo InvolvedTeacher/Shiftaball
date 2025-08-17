@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://k57tjsktx5my"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://k57tjsktx5my"]
+
+[ext_resource type="FontFile" uid="uid://bcuq1ujejo8b6" path="res://assets/ui/themes/ARCADECLASSIC.TTF" id="1_jm4f5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8emv4"]
 content_margin_left = 20.0
@@ -89,6 +91,7 @@ border_color = Color(0, 0, 0, 1)
 
 [resource]
 Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_jm4f5")
 Button/styles/disabled = SubResource("StyleBoxFlat_8emv4")
 Button/styles/focus = SubResource("StyleBoxFlat_cvxu5")
 Button/styles/hover = SubResource("StyleBoxFlat_wbuqj")
@@ -106,5 +109,8 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_skekc")
+PopupMenu/fonts/font = ExtResource("1_jm4f5")
+PopupMenu/fonts/font_separator = ExtResource("1_jm4f5")
+PopupMenu/fonts/title_font = ExtResource("1_jm4f5")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_jm4f5")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_md5ro")

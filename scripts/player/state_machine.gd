@@ -2,6 +2,8 @@ extends Node
 
 @export var initial_state: State
 
+@onready var player_state_death: PlayerStateDeath = $PlayerStateDeath
+
 var states: Dictionary = {}
 var current_state: State
 
@@ -17,12 +19,18 @@ func _ready():
 		current_state = initial_state
 
 func _process(delta):
-	if current_state:
-		current_state.update(delta)
+	if !get_parent().player_dead:
+		if current_state:
+			current_state.update(delta)
 
 func _physics_process(delta):
-	if current_state:
-		current_state.physics_update(delta)
+	if !get_parent().player_dead:
+		if current_state:
+			current_state.physics_update(delta)
+	
+	if get_parent().player_dead:
+		if current_state:
+			player_state_death.physics_update(delta)
 
 func on_child_transition(state, new_state_name):
 	if state != current_state:

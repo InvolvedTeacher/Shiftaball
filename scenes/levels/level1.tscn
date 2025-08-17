@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=4 uid="uid://laxvc1gbsrsn"]
+[gd_scene load_steps=16 format=4 uid="uid://laxvc1gbsrsn"]
 
 [ext_resource type="Texture2D" uid="uid://e5wnkvkf28dj" path="res://assets/levels/level_1/bg1.png" id="1_nfihu"]
 [ext_resource type="Texture2D" uid="uid://hc6pwobhkcw4" path="res://assets/levels/level_1/girder_tileset.png" id="2_lgguw"]
 [ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="4_sbmf2"]
 [ext_resource type="Script" uid="uid://yh126s30ncs8" path="res://scripts/player/transition_camera.gd" id="6_nfihu"]
-[ext_resource type="Texture2D" uid="uid://cvopmty7v8mwm" path="res://assets/collectibles/coin.png" id="8_gvm5i"]
 [ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="9_jrfo0"]
 [ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="10_db1r7"]
 [ext_resource type="PackedScene" uid="uid://l6gwvlqnijhl" path="res://scenes/collectibles/coin_ui.tscn" id="11_6gwlt"]
@@ -43,17 +42,10 @@ texture_region_size = Vector2i(32, 32)
 2:3/0 = 0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd1x5"]
-texture = ExtResource("8_gvm5i")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.1392, -11.6933, -4.50885, -16, 4.11247, -16, 11.8419, -12.0897, 16, -3.76564, 16, 3.86473, 11.7428, 12.0897, 3.81518, 16, -4.31067, 16, -11.8419, 11.8915, -16, 4.06292, -16, -3.46835)
-
 [sub_resource type="TileSet" id="TileSet_yetkn"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
-sources/6 = SubResource("TileSetAtlasSource_nd1x5")
 sources/1 = SubResource("TileSetAtlasSource_jprdt")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s24du"]
@@ -90,6 +82,7 @@ tile_map_data = PackedByteArray("AAAAAA4AAQAAAAIAAAAAAA0AAQAAAAEAAAAAAAwAAQAAAAI
 tile_set = SubResource("TileSet_yetkn")
 
 [node name="DamageArea" type="TileMapLayer" parent="."]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAADAAcAAAAAAAAAADAGAAcAAAAAAAAAADAKAAQAAAAAAAAAADALAAQAAAAAAAAAADASAAUAAAAAAAAAAAATAAUAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAYAAAAAAAAAAFAUAAcAAAAAAAAAAFAUAAgAAAAAAAAAAFAUAAkAAAAAAAAAAFAUAAoAAAAAAAAAAFATAAsAAAAAAAAAADASAAsAAAAAAAAAADASAAoAAAAAAAAAAGASAAkAAAAAAAAAAGASAAcAAAAAAAAAAGASAAYAAAAAAAAAAGAGAA8AAAAAAAAAADAHAA8AAAAAAAAAADAIAA8AAAAAAAAAADAJAA8AAAAAAAAAADAKAA8AAAAAAAAAADALAA8AAAAAAAAAADAMAA8AAAAAAAAAADANAA8AAAAAAAAAADAOAA8AAAAAAAAAADAPAA8AAAAAAAAAADAQAA8AAAAAAAAAADAWAA8AAAAAAAAAADAXAA8AAAAAAAAAADAYAA8AAAAAAAAAADAZAA8AAAAAAAAAADA=")
 tile_set = SubResource("TileSet_8be2q")
 rendering_quadrant_size = 32

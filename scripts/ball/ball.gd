@@ -40,8 +40,8 @@ func disable_ball() -> void:
 # throw_ball throws the ball only if it is currently disabled
 func throw_ball(strength: float) -> void:
 	if not disabled:
-		return
-	var direction: Vector2 = (get_viewport().get_mouse_position() - player.position).normalized()
+		return   
+	var direction: Vector2 = (get_global_mouse_position() - player.position).normalized()
 	position = player.position
 	velocity = strength * direction
 	show()
