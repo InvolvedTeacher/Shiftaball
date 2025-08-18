@@ -1,5 +1,5 @@
-extends CharacterBody2D
-class_name Ball
+class_name Ball extends CharacterBody2D
+
 
 var disabled: bool
 var player: CharacterBody2D

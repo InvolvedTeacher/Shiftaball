@@ -88,7 +88,7 @@ tile_set = SubResource("TileSet_8be2q")
 rendering_quadrant_size = 32
 
 [node name="Player" parent="." instance=ExtResource("9_jrfo0")]
-position = Vector2(35, 218)
+position = Vector2(29, 218)
 
 [node name="TransitionCamera" type="Camera2D" parent="Player"]
 position = Vector2(398, 22)
