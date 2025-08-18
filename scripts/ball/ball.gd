@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 
 func disable_ball() -> void:
 	hide()
-	position = Vector2(-100, -100)
+	position = Vector2(-3300, -3300)
 	if not small:
 		shift_ball()
 	disabled = true
@@ -62,3 +62,7 @@ func get_disabled() -> bool:
 
 func is_small() -> bool:
 	return small
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

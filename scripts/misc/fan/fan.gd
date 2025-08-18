@@ -30,20 +30,18 @@ func deactivate() -> void:
 	particles2.emitting = false
 	particles3.emitting = false
 
-func update(_delta):
+func _process(_delta):
 	var rotation_rad = deg_to_rad(rotation)
-	if boost and is_active:
+	if boost and is_active and ball.is_small():
 		ball.velocity.y -= float_speed * _delta * cos(rotation_rad)
 		ball.velocity.x += float_speed * _delta * sin(rotation_rad)
 
 
 func _on_air_body_entered(body: Node2D) -> void:
-	if body.name == "Ball":
-		if body.is_small():
-			boost = true
+	if body is Ball:
+		boost = true
 
 
 func _on_air_body_exited(body: Node2D) -> void:
-	if body.name == "Ball":
-		if body.is_small():
-			boost = false
+	if body is Ball:
+		boost = false

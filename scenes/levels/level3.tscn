@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://ivqqgk3t1h72"]
+[gd_scene load_steps=22 format=4 uid="uid://ivqqgk3t1h72"]
 
 [ext_resource type="Texture2D" uid="uid://6civcoqhb5tr" path="res://assets/levels/level_2/bg2.png" id="1_wb0vq"]
 [ext_resource type="Texture2D" uid="uid://c7whirwmjnip0" path="res://assets/levels/level_3/steel tileset.png" id="2_72x3h"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bxjpitljjquc3" path="res://transitions/door.tscn" id="12_v6yyo"]
 [ext_resource type="PackedScene" uid="uid://b8a2my2namghg" path="res://scenes/misc/fan.tscn" id="13_522sc"]
 [ext_resource type="PackedScene" uid="uid://j4ig5l8xbwwt" path="res://scenes/misc/fade_area.tscn" id="14_522sc"]
-[ext_resource type="PackedScene" uid="uid://cetjmbtiwwsl8" path="res://scenes/misc/fan_air_zone.tscn" id="15_t14x3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb0vq"]
 texture = ExtResource("2_72x3h")
@@ -258,13 +257,10 @@ duration = 1.5
 position = Vector2(496, 26)
 fan = NodePath("../Fan")
 
-[node name="Fan" parent="." instance=ExtResource("13_522sc")]
-position = Vector2(123, 440)
-float_speed = 100.0
-
-[node name="FanAirZone" parent="Fan" instance=ExtResource("15_t14x3")]
-position = Vector2(0, -88)
-scale = Vector2(4.8, 8.64)
+[node name="Fan" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("13_522sc")]
+position = Vector2(577, 170)
+float_speed = 3300.0
+ball = NodePath("../Ball")
 
 [node name="HiddenArea1" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAIAAAAEAAAAAAACAAIAAAAEAAMAAAACAAIAAAAAAAMAAAAAAAIAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAIAAAAEAAEAAAACAAIAAAAEAAIAAAACAAIAAAABAAAAAAABAAIAAAACAAAAAAABAAIAAAADAAAAAAABAAIAAAABAAMAAAABAAIAAAACAAMAAAABAAIAAAADAAMAAAABAAIAAAABAAEAAAABAAIAAAACAAEAAAABAAIAAAADAAEAAAABAAIAAAADAAIAAAABAAIAAAACAAIAAAABAAIAAAABAAIAAAABAAIAAAAAAAQAAAAAAAMAAAAEAAQAAAACAAMAAAADAAQAAAABAAMAAAACAAQAAAABAAMAAAABAAQAAAABAAMAAAAAAP//AAAAAAEAAAAEAP//AAACAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAA=")
