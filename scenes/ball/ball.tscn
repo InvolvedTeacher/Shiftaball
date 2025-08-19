@@ -24,8 +24,7 @@ shape = SubResource("CircleShape2D_nv6q1")
 
 [node name="Hitbox" type="Area2D" parent="."]
 scale = Vector2(1.6, 1.6)
-collision_layer = 32
-collision_mask = 32
+collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_stoaj")

@@ -31,7 +31,6 @@ func physics_update(delta: float) -> void:
 	if direction:
 		var max_speed = player.get_max_run_speed()
 		var acceleration = player.get_walk_acceleration()
-		player.velocity.x = move_toward(player.velocity.x, direction * max_speed, 
-										acceleration)
+		player.velocity.x = move_toward(player.velocity.x, direction * max_speed, acceleration)
 	else:
 		player.velocity.x = move_toward(player.velocity.x, 0, player.get_walk_deceleration())

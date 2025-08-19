@@ -259,7 +259,7 @@ fan = NodePath("../Fan")
 
 [node name="Fan" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("13_522sc")]
 position = Vector2(577, 170)
-float_speed = 3300.0
+float_speed = 2500.0
 ball = NodePath("../Ball")
 
 [node name="HiddenArea1" type="TileMapLayer" parent="."]

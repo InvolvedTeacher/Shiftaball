@@ -109,7 +109,7 @@ tile_set = SubResource("TileSet_8be2q")
 rendering_quadrant_size = 32
 
 [node name="Player" parent="." instance=ExtResource("5_hkuam")]
-position = Vector2(27, 293)
+position = Vector2(22, 293)
 
 [node name="TransitionCamera" type="Camera2D" parent="Player"]
 position = Vector2(405, -53)

@@ -67,4 +67,4 @@ func is_small() -> bool:
 
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	disable_ball()
