@@ -14,10 +14,7 @@ func _ready():
 func _on_area_2d_body_entered(body):
 	if collected:
 		return
-	# or body is Ball
 	if (body is Player or body is Ball):
-		
-		print("cáspitas, me capturaste! soy una moneda, estoy en ", self.global_position)
 		sfx_coin.play()
 		GameController.collect_coin(value)
 		timer.start()

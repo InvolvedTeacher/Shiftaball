@@ -190,6 +190,8 @@ shape = SubResource("ConvexPolygonShape2D_jjjef")
 
 [node name="Air" type="Area2D" parent="."]
 position = Vector2(0, -93)
+collision_layer = 2
+collision_mask = 2
 
 [node name="AirZone" type="CollisionShape2D" parent="Air"]
 position = Vector2(0, 5)

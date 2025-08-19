@@ -11,8 +11,6 @@ class_name Fan
 @onready var particles2: GPUParticles2D = $GPUParticles2D2
 @onready var particles3: GPUParticles2D = $GPUParticles2D3
 
-var fan : CollisionObject2D
-
 var is_active : bool
 var boost : bool
 
@@ -31,10 +29,9 @@ func deactivate() -> void:
 	particles3.emitting = false
 
 func _process(_delta):
-	var rotation_rad = deg_to_rad(rotation)
 	if boost and is_active and ball.is_small():
-		ball.velocity.y -= float_speed * _delta * cos(rotation_rad)
-		ball.velocity.x += float_speed * _delta * sin(rotation_rad)
+		ball.velocity.y -= float_speed * _delta * cos(rotation)
+		ball.velocity.x += float_speed * _delta * sin(rotation)
 
 
 func _on_air_body_entered(body: Node2D) -> void:

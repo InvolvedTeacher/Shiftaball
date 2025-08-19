@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 
 func disable_ball() -> void:
 	hide()
+	get_node("Hitbox/CollisionShape2D").disabled = true
 	position = Vector2(-3300, -3300)
 	if not small:
 		shift_ball()
@@ -40,7 +41,8 @@ func disable_ball() -> void:
 # throw_ball throws the ball only if it is currently disabled
 func throw_ball(strength: float) -> void:
 	if not disabled:
-		return   
+		return
+	get_node("Hitbox/CollisionShape2D").disabled = false
 	var direction: Vector2 = (get_global_mouse_position() - player.position).normalized()
 	position = player.position
 	velocity = strength * direction

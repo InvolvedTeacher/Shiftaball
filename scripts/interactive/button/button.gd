@@ -7,7 +7,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Ball":
-		if not body.is_small():				
+		if not body.is_small():
 			press_button()
 
 func press_button() -> void:
