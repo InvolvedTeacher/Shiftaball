@@ -1,23 +1,23 @@
-[gd_scene load_steps=22 format=4 uid="uid://ivqqgk3t1h72"]
+[gd_scene load_steps=22 format=4 uid="uid://c2jv77w4y7krc"]
 
-[ext_resource type="Texture2D" uid="uid://6civcoqhb5tr" path="res://assets/levels/level_2/bg2.png" id="1_wb0vq"]
-[ext_resource type="Texture2D" uid="uid://c7whirwmjnip0" path="res://assets/levels/level_3/steel tileset.png" id="2_72x3h"]
-[ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="4_a82vw"]
-[ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="5_t14x3"]
-[ext_resource type="Script" uid="uid://yh126s30ncs8" path="res://scripts/player/transition_camera.gd" id="6_ahaer"]
-[ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="7_wt4k6"]
-[ext_resource type="PackedScene" uid="uid://l6gwvlqnijhl" path="res://scenes/collectibles/coin_ui.tscn" id="8_wo5bm"]
-[ext_resource type="PackedScene" uid="uid://c2y3rysb650n8" path="res://scenes/collectibles/coin.tscn" id="9_edoqj"]
-[ext_resource type="PackedScene" uid="uid://cg7qcflf0631f" path="res://scenes/interactive/button/button.tscn" id="10_022ip"]
-[ext_resource type="PackedScene" uid="uid://b7xlkli3l8mby" path="res://scenes/interactive/bars/large_bars.tscn" id="11_a82vw"]
-[ext_resource type="PackedScene" uid="uid://d4c7cuxdpjngf" path="res://scenes/interactive/bars/bars.tscn" id="11_hl16f"]
-[ext_resource type="PackedScene" uid="uid://bgoq2ns2v81i1" path="res://scenes/interactive/lever/lever.tscn" id="12_ah4rv"]
-[ext_resource type="PackedScene" uid="uid://bxjpitljjquc3" path="res://transitions/door.tscn" id="12_v6yyo"]
-[ext_resource type="PackedScene" uid="uid://b8a2my2namghg" path="res://scenes/misc/fan.tscn" id="13_522sc"]
-[ext_resource type="PackedScene" uid="uid://j4ig5l8xbwwt" path="res://scenes/misc/fade_area.tscn" id="14_522sc"]
+[ext_resource type="Texture2D" uid="uid://6civcoqhb5tr" path="res://assets/levels/level_2/bg2.png" id="1_5sfmg"]
+[ext_resource type="Texture2D" uid="uid://c7whirwmjnip0" path="res://assets/levels/level_3/steel tileset.png" id="2_tsmbm"]
+[ext_resource type="Texture2D" uid="uid://cea4my4v01014" path="res://assets/levels/level_1/ice spikes.png" id="3_y3vdi"]
+[ext_resource type="PackedScene" uid="uid://d317g3stss0nr" path="res://scenes/player/player.tscn" id="4_irrt8"]
+[ext_resource type="Script" uid="uid://yh126s30ncs8" path="res://scripts/player/transition_camera.gd" id="5_ev8xs"]
+[ext_resource type="PackedScene" uid="uid://dibwv8473eq5u" path="res://scenes/ball/ball.tscn" id="6_q6dln"]
+[ext_resource type="PackedScene" uid="uid://l6gwvlqnijhl" path="res://scenes/collectibles/coin_ui.tscn" id="7_qtppw"]
+[ext_resource type="PackedScene" uid="uid://c2y3rysb650n8" path="res://scenes/collectibles/coin.tscn" id="8_atlnk"]
+[ext_resource type="PackedScene" uid="uid://cg7qcflf0631f" path="res://scenes/interactive/button/button.tscn" id="9_7kkoh"]
+[ext_resource type="PackedScene" uid="uid://d4c7cuxdpjngf" path="res://scenes/interactive/bars/bars.tscn" id="10_m1gbu"]
+[ext_resource type="PackedScene" uid="uid://b7xlkli3l8mby" path="res://scenes/interactive/bars/large_bars.tscn" id="11_yw4fb"]
+[ext_resource type="PackedScene" uid="uid://bxjpitljjquc3" path="res://transitions/door.tscn" id="12_1wpw8"]
+[ext_resource type="PackedScene" uid="uid://bgoq2ns2v81i1" path="res://scenes/interactive/lever/lever.tscn" id="13_w1hcc"]
+[ext_resource type="PackedScene" uid="uid://b8a2my2namghg" path="res://scenes/misc/fan.tscn" id="14_ph4mq"]
+[ext_resource type="PackedScene" uid="uid://j4ig5l8xbwwt" path="res://scenes/misc/fade_area.tscn" id="15_npa1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb0vq"]
-texture = ExtResource("2_72x3h")
+texture = ExtResource("2_tsmbm")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -67,7 +67,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_wb0vq")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s24du"]
-texture = ExtResource("4_a82vw")
+texture = ExtResource("3_y3vdi")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 12.6399, -4.91551, -12.6399, -4.73996)
@@ -80,7 +80,7 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_s24du")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ah4rv"]
-texture = ExtResource("2_72x3h")
+texture = ExtResource("2_tsmbm")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -179,7 +179,7 @@ offset_left = -46.0
 offset_right = 33.6201
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_wb0vq")
+texture = ExtResource("1_5sfmg")
 metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMapLayer" parent="."]
@@ -193,71 +193,71 @@ tile_map_data = PackedByteArray("AAAHAA8AAAAAAAAAADAIAA8AAAAAAAAAADAJAA8AAAAAAAA
 tile_set = SubResource("TileSet_8be2q")
 rendering_quadrant_size = 32
 
-[node name="Player" parent="." instance=ExtResource("5_t14x3")]
+[node name="Player" parent="." instance=ExtResource("4_irrt8")]
 position = Vector2(22, 372)
 
 [node name="TransitionCamera" type="Camera2D" parent="Player"]
 position = Vector2(405, -132)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
-script = ExtResource("6_ahaer")
+script = ExtResource("5_ev8xs")
 
-[node name="Ball" parent="." groups=["Ball"] instance=ExtResource("7_wt4k6")]
+[node name="Ball" parent="." groups=["Ball"] instance=ExtResource("6_q6dln")]
 position = Vector2(-100, -100)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("8_wo5bm")]
+[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("7_qtppw")]
 offset_left = 79.0
 offset_top = 6.0
 offset_right = 119.0
 offset_bottom = 46.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Coin" parent="." instance=ExtResource("9_edoqj")]
+[node name="Coin" parent="." instance=ExtResource("8_atlnk")]
 position = Vector2(529, 245)
 
-[node name="Coin2" parent="." instance=ExtResource("9_edoqj")]
+[node name="Coin2" parent="." instance=ExtResource("8_atlnk")]
 position = Vector2(31, 48)
 
-[node name="Coin3" parent="." instance=ExtResource("9_edoqj")]
+[node name="Coin3" parent="." instance=ExtResource("8_atlnk")]
 position = Vector2(1709, 26)
 
-[node name="Button1" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("10_022ip")]
+[node name="Button1" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("9_7kkoh")]
 position = Vector2(1712, 272)
 rotation = 4.71239
 bars = NodePath("../Bars1")
 
-[node name="LargeBarsButton1" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("10_022ip")]
+[node name="LargeBarsButton1" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("9_7kkoh")]
 position = Vector2(560, 16)
 rotation = 3.14159
 bars = NodePath("../LargeBars1")
 
-[node name="LargeBarsButton2" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("10_022ip")]
+[node name="LargeBarsButton2" parent="." node_paths=PackedStringArray("bars") instance=ExtResource("9_7kkoh")]
 position = Vector2(1712, 432)
 rotation = -1.5708
 bars = NodePath("../LargeBars2")
 
-[node name="Bars1" parent="." instance=ExtResource("11_hl16f")]
+[node name="Bars1" parent="." instance=ExtResource("10_m1gbu")]
 position = Vector2(1040, 48)
 
-[node name="LargeBars1" parent="." instance=ExtResource("11_a82vw")]
+[node name="LargeBars1" parent="." instance=ExtResource("11_yw4fb")]
 position = Vector2(656, 304)
 
-[node name="LargeBars2" parent="." instance=ExtResource("11_a82vw")]
+[node name="LargeBars2" parent="." instance=ExtResource("11_yw4fb")]
 position = Vector2(144, 80)
 
-[node name="Door" parent="." instance=ExtResource("12_v6yyo")]
+[node name="Door" parent="." instance=ExtResource("12_1wpw8")]
 position = Vector2(999, 80)
 transition_type = "fade"
-next_scene = "res://scenes/ui/main_menu_screen.tscn"
+next_scene = "res://scenes/levels/level4.tscn"
 duration = 1.5
 
-[node name="Lever" parent="." node_paths=PackedStringArray("fan") instance=ExtResource("12_ah4rv")]
+[node name="Lever" parent="." node_paths=PackedStringArray("fan") instance=ExtResource("13_w1hcc")]
 position = Vector2(496, 26)
 fan = NodePath("../Fan")
 
-[node name="Fan" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("13_522sc")]
+[node name="Fan" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("14_ph4mq")]
 position = Vector2(577, 170)
 float_speed = 2500.0
 ball = NodePath("../Ball")
@@ -267,7 +267,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAIAAAAEAAAAAAACAAIAAAAEAAMAAAACAAI
 tile_set = SubResource("TileSet_522sc")
 rendering_quadrant_size = 32
 
-[node name="FadeArea" parent="HiddenArea1" instance=ExtResource("14_522sc")]
+[node name="FadeArea" parent="HiddenArea1" instance=ExtResource("15_npa1m")]
 position = Vector2(80, 64)
 scale = Vector2(8.01943, 6.3983)
 
@@ -276,6 +276,6 @@ tile_map_data = PackedByteArray("AAAyAAcAAAAAAAIAAAAyAAYAAAAAAAEAAAAzAAYAAAABAAE
 tile_set = SubResource("TileSet_522sc")
 rendering_quadrant_size = 32
 
-[node name="FadeArea" parent="HiddenArea2" instance=ExtResource("14_522sc")]
+[node name="FadeArea" parent="HiddenArea2" instance=ExtResource("15_npa1m")]
 position = Vector2(1680, 240)
 scale = Vector2(8, 4.798)

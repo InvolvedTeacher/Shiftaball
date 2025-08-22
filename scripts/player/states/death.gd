@@ -12,5 +12,4 @@ func enter():
 
 
 func physics_update(delta: float):
-	var speed : float = player.velocity.y
 	player.velocity.y += player.get_death_fly_speed() * delta

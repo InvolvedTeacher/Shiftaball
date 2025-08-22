@@ -68,3 +68,6 @@ func is_small() -> bool:
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	disable_ball()
+
+func solid_ball() -> void:
+	return
